@@ -34,7 +34,7 @@ public function onPreSpawn(PlayerPreSpawnEvent $e){
       $player-kick("[NoMoreBot] Bot Attack Detected!")
     }
   }else{
-    $this->getServer()->getScheduler()->scheduleRepeatingTask(new WhitelistAdder($this), 20);
+    $this->getServer()->getScheduler()->scheduleRepeatingTask(new WhitelistAdder($this, $player), 20);
   }
  }
 }
