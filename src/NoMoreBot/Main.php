@@ -28,6 +28,12 @@ public function onDisable(){
   }
 
 public function onPreSpawn(PlayerPreSpawnEvent $e){
-  //tomorrow big commit!
-}
+  if($this->whitelist === true){
+    if(!$wl->exist($name)){
+      $player-kick("[NoMoreBot] Bot Attack Detected!")
+    }
+  }else{
+    $this->getServer()->getScheduler()->scheduleRepeatingTask(new WhitelistAdder($this), 20);
+  }
+ }
 }
