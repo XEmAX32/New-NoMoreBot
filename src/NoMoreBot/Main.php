@@ -4,6 +4,7 @@ namespace NoMoreBot
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerPreSpawnEvent;
 
 class Main extends PluginBase implements Listener{
   
